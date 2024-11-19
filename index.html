@@ -17,7 +17,7 @@
         /* Body styling with live-changing rainbow background */
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background: linear-gradient(90deg, #ff4e50, #f9d423, #42e695, #3a7bd5, #ff4e50);
             background-size: 400% 400%;
             animation: rainbowBG 10s ease infinite;
             color: white;
@@ -27,10 +27,10 @@
             align-items: center;
             line-height: 1.6;
             height: 100vh;
-            overflow: auto; /* Ensure scrolling works */
+            overflow: auto;
         }
 
-        /* Background animation for live-changing rainbow colors */
+        /* Background animation */
         @keyframes rainbowBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -40,13 +40,14 @@
         /* Header Styling */
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
             text-align: center;
             margin-top: 50px;
             text-decoration: underline;
-            color: #000;
+            color: black;
             letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
         }
 
         /* Paragraph Styling */
@@ -62,14 +63,20 @@
 
         /* Section Styling */
         .section {
-            width: 100%;
-            max-width: 1200px;
-            padding: 60px 20px;
+            width: 90%;
+            max-width: 1000px;
+            padding: 40px 20px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.1);
             margin-top: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 12px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3), 0 15px 40px rgba(0, 0, 0, 0.2);
         }
 
         .section h2 {
@@ -79,6 +86,7 @@
             color: #ffcc00;
             font-weight: 700;
             text-transform: uppercase;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .section p {
@@ -87,28 +95,50 @@
             font-weight: 400;
         }
 
+        /* Stylish Section Links */
         .section-link {
-            color: #ffcc00;
+            display: inline-block;
+            color: white;
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: bold;
             letter-spacing: 1px;
-            transition: color 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #ffcc00, #ff5733);
+            transition: all 0.3s ease;
         }
 
         .section-link:hover {
-            color: white;
+            background: linear-gradient(90deg, #ff5733, #ffcc00);
+            color: black;
+            box-shadow: 0 4px 10px rgba(255, 87, 51, 0.5), 0 6px 15px rgba(255, 204, 0, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Heading -->
-    <h1>Risab's Mcpe Projects</h1>
+    <h1><font color="black">Risab's Mcpe Projects</font></h1>
 
     <!-- Welcome message -->
-    <p>Welcome to Mcpe Projects made by me. Here you will find many different types of mods and texture packs created by me.</p>
+    <p><font color="black">Welcome to Mcpe Projects made by me. Here you will find many different types of mods and texture packs created by me.</font></p>
 
-    <!-- Section links (these could lead to other pages or sections) -->
+    <!-- Section links -->
     <div id="section1" class="section">
         <h2>Section 1</h2>
         <p><a href="https://www.example.com" class="section-link">Visit Section 1</a></p>
