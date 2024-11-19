@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risab Mcpe Projects</title>
+    <!-- Link to Google Fonts for stylish typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling with live-changing rainbow background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%;
+            animation: rainbowBG 10s ease infinite;
+            color: white;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.6;
+            height: 100vh;
+            overflow: auto; /* Ensure scrolling works */
+        }
+
+        /* Background animation for live-changing rainbow colors */
+        @keyframes rainbowBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Header Styling */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 50px;
+            text-decoration: underline;
+            color: #000;
+            letter-spacing: 2px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 20px;
+            max-width: 800px;
+            font-weight: 300;
+            line-height: 1.7;
+            color: #f0f0f0;
+        }
+
+        /* Section Styling */
+        .section {
+            width: 100%;
+            max-width: 1200px;
+            padding: 60px 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffcc00;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 400;
+        }
+
+        .section-link {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .section-link:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Heading -->
+    <h1>Risab's Mcpe Projects</h1>
+
+    <!-- Welcome message -->
+    <p>Welcome to Mcpe Projects made by me. Here you will find many different types of mods and texture packs created by me.</p>
+
+    <!-- Section links (these could lead to other pages or sections) -->
+    <div id="section1" class="section">
+        <h2>Section 1</h2>
+        <p><a href="https://www.example.com" class="section-link">Visit Section 1</a></p>
+    </div>
+
+    <div id="section2" class="section">
+        <h2>Section 2</h2>
+        <p><a href="https://www.example2.com" class="section-link">Visit Section 2</a></p>
+    </div>
+
+    <div id="section3" class="section">
+        <h2>Section 3</h2>
+        <p><a href="https://www.example3.com" class="section-link">Visit Section 3</a></p>
+    </div>
+
+</body>
+</html>
