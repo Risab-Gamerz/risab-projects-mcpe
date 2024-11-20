@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RG Shader</title>
+    <style>
+        /* Background Animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial Black', sans-serif;
+            color: white;
+            background: linear-gradient(45deg, red, black, crimson);
+            background-size: 300% 300%;
+            animation: gradientAnimation 8s ease infinite;
+            text-align: center;
+        }
+
+        h1, p {
+            margin: 0;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        p {
+            font-size: 1em;
+            font-weight: 300;
+        }
+
+        /* Section Buttons */
+        .section {
+            margin: 20px auto;
+            padding: 15px 30px;
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid crimson;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: white;
+            transition: transform 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .section:hover {
+            transform: scale(1.1);
+            background: crimson;
+        }
+
+        .section a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>RG Shader v2</h1>
+    <p><i>RG Shader,It is one of the best shader which makes games look more realistc .It works on original minecraft and also patched minecraft.</i></p>
+    
+    <div>
+        <div class="section"><a href="https://www.mediafire.com/file/9x5ss2lggmrzs5q/RG_SHADER_v.2_.mcpack.zip/file" target="_blank">Download</a></div>
+        <div class="section"><a href="https://mcpedl.com/rg-shader-renderdragon-support-2/" target="_blank">MCPEDL PAGE</a></div>   
+        <div class="section"><a href="https://www.youtube.com/@RisabGamerz" target="_blank">MY YOUTUBE CHANNEL</a></div>
+    </div>
+</body>
+</html>
