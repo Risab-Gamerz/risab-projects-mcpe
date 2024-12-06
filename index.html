@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risab's Mcpe Projects</title>
-    <!-- Link to Google Fonts for stylish typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
     <style>
         /* Basic reset */
         * {
@@ -16,8 +16,8 @@
 
         /* Body styling with live gradient animation */
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+            font-family: 'Roboto Slab', serif;
+            background: linear-gradient(90deg, #1e3c72, #2a5298, #71b7e6, #9abcfb);
             background-size: 600% 600%;
             animation: gradientBG 12s ease infinite;
             color: white;
@@ -38,14 +38,15 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Particle effect */
-        #particles-js {
+        /* Falling stars */
+        canvas {
             position: absolute;
-            width: 100%;
-            height: 100%;
             top: 0;
             left: 0;
-            z-index: 1;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
         }
 
         /* Header Styling */
@@ -56,9 +57,9 @@
             text-align: center;
             margin-top: 50px;
             text-decoration: underline;
-            color: black;
+            color: #ffd700; /* Golden text color */
             letter-spacing: 2px;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+            text-shadow: 0 0 20px rgba(255, 223, 0, 0.8), 0 0 30px rgba(255, 223, 0, 0.6);
             z-index: 2;
         }
 
@@ -72,7 +73,7 @@
             line-height: 1.7;
             color: #ffffff;
             z-index: 2;
-            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
         }
 
         /* Section Styling */
@@ -95,7 +96,7 @@
         }
 
         .section h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: #ffcc00;
@@ -147,8 +148,8 @@
     </style>
 </head>
 <body>
-    <!-- Particle background -->
-    <div id="particles-js"></div>
+    <!-- Canvas for Falling Stars -->
+    <canvas id="fallingStars"></canvas>
 
     <!-- Heading -->
     <h1>Risab's Mcpe Projects</h1>
@@ -182,56 +183,67 @@
         <p><a class="section-link" href="sigmaoptimizer.html">Visit Sigma Optimizer</a></p>
     </div>
 
-    <!-- ParticleJS Script -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- JavaScript for Falling Stars -->
     <script>
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 120,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": { "value": ["#ff6f61", "#d72631", "#3a1c71", "#ffcc00"] },
-                "shape": {
-                    "type": "polygon",
-                    "stroke": { "width": 0, "color": "#000000" },
-                    "polygon": { "nb_sides": 6 }
-                },
-                "opacity": {
-                    "value": 0.7,
-                    "random": true,
-                },
-                "size": {
-                    "value": 5,
-                    "random": true,
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 4,
-                    "direction": "none",
+        const canvas = document.getElementById('fallingStars');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const stars = [];
+        const starCount = 50;
+
+        class Star {
+            constructor(x, y, size, speed) {
+                this.x = x;
+                this.y = y;
+                this.size = size;
+                this.speed = speed;
+            }
+
+            draw() {
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            update() {
+                this.y += this.speed;
+                if (this.y > canvas.height) {
+                    this.y = 0 - this.size;
+                    this.x = Math.random() * canvas.width;
                 }
-            },
-            "interactivity": {
-                "events": {
-                    "onhover": { "enable": true, "mode": "repulse" },
-                    "onclick": { "enable": true, "mode": "push" },
-                },
-                "modes": {
-                    "repulse": { "distance": 100 },
-                    "push": { "particles_nb": 6 },
-                }
-            },
-            "retina_detect": true
+            }
+        }
+
+        function createStars() {
+            for (let i = 0; i < starCount; i++) {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height;
+                const size = Math.random() * 2 + 1;
+                const speed = Math.random() * 2 + 1;
+                stars.push(new Star(x, y, size, speed));
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            stars.forEach(star => {
+                star.update();
+                star.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        createStars();
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            stars.length = 0;
+            createStars();
         });
     </script>
 </body>
