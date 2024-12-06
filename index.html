@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risab Mcpe Projects</title>
+    <title>Risab's Mcpe Projects</title>
     <!-- Link to Google Fonts for stylish typography -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -14,51 +14,65 @@
             box-sizing: border-box;
         }
 
-        /* Body styling with live-changing rainbow background */
+        /* Body styling with live gradient animation */
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(90deg, #ff4e50, #f9d423, #42e695, #3a7bd5, #ff4e50);
-            background-size: 400% 400%;
-            animation: rainbowBG 10s ease infinite;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+            background-size: 600% 600%;
+            animation: gradientBG 12s ease infinite;
             color: white;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             line-height: 1.6;
-            height: 100vh;
-            overflow: auto;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
         }
 
-        /* Background animation */
-        @keyframes rainbowBG {
+        /* Live background animation */
+        @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
+        /* Particle effect */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
         /* Header Styling */
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 700;
             text-align: center;
             margin-top: 50px;
             text-decoration: underline;
             color: black;
             letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+            z-index: 2;
         }
 
         /* Paragraph Styling */
         p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             text-align: center;
             margin-top: 20px;
             max-width: 800px;
             font-weight: 300;
             line-height: 1.7;
-            color: #f0f0f0;
+            color: #ffffff;
+            z-index: 2;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
         }
 
         /* Section Styling */
@@ -67,16 +81,17 @@
             max-width: 1000px;
             padding: 40px 20px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.2);
             margin-top: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 12px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 12px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            z-index: 2;
         }
 
         .section:hover {
             transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3), 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 20px 50px rgba(0, 0, 0, 0.3);
         }
 
         .section h2 {
@@ -86,11 +101,11 @@
             color: #ffcc00;
             font-weight: 700;
             text-transform: uppercase;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
         }
 
         .section p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: white;
             font-weight: 400;
         }
@@ -100,25 +115,25 @@
             display: inline-block;
             color: white;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
             letter-spacing: 1px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 50px;
-            background: linear-gradient(90deg, #ffcc00, #ff5733);
-            transition: all 0.3s ease;
+            background: linear-gradient(90deg, #ff6f61, #d72631);
+            transition: all 0.4s ease;
         }
 
         .section-link:hover {
-            background: linear-gradient(90deg, #ff5733, #ffcc00);
+            background: linear-gradient(90deg, #d72631, #ff6f61);
             color: black;
-            box-shadow: 0 4px 10px rgba(255, 87, 51, 0.5), 0 6px 15px rgba(255, 204, 0, 0.4);
+            box-shadow: 0 4px 10px rgba(215, 38, 49, 0.6), 0 6px 15px rgba(255, 111, 97, 0.5);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
 
             .section h2 {
@@ -126,40 +141,98 @@
             }
 
             p {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Particle background -->
+    <div id="particles-js"></div>
+
     <!-- Heading -->
-    <h1><font color="black">Risab's Mcpe Projects</font></h1>
+    <h1>Risab's Mcpe Projects</h1>
 
     <!-- Welcome message -->
-    <p><font color="black">Welcome to Mcpe Projects made by me. Here you will find many different types of mods and texture packs created by me.</font></p>
+    <p>Welcome to Mcpe Projects made by me. Here you will find many different types of mods and texture packs created by me.</p>
 
     <!-- Section links -->
     <div id="section1" class="section">
         <h2>RG SHADER</h2>
-        <p><a href="rgshader.html">Visit RG Shader</a></p>
+        <p><a class="section-link" href="rgshader.html">Visit RG Shader</a></p>
     </div>
 
     <div id="section2" class="section">
-        <h2>Asthetic Sound</h2>
-        <p><a href="astheticsound.html">Visit Asthetic Sound</a></p>
+        <h2>Aesthetic Sound</h2>
+        <p><a class="section-link" href="aestheticsound.html">Visit Aesthetic Sound</a></p>
     </div>
 
     <div id="section3" class="section">
         <h2>Apple Shader</h2>
-        <p><a href="appleshader.html">Visit Apple shader</a></p>
+        <p><a class="section-link" href="appleshader.html">Visit Apple Shader</a></p>
     </div>
-        <div id="section3" class="section">
-        <h2>Apple Shader(rw variation)</h2>
-        <p><a href="appleshaderrw.html">Visit Apple shader rw</a></p>
+
+    <div id="section4" class="section">
+        <h2>Apple Shader (RW Variation)</h2>
+        <p><a class="section-link" href="appleshaderrw.html">Visit Apple Shader RW</a></p>
     </div>
-       <div id="section4" class="section">
-        <h2>Sigma optimizer</h2>
-        <p><a href="sigmaoptimizer.html">Visit Sigma optimizer rw</a></p>
+
+    <div id="section5" class="section">
+        <h2>Sigma Optimizer</h2>
+        <p><a class="section-link" href="sigmaoptimizer.html">Visit Sigma Optimizer</a></p>
     </div>
+
+    <!-- ParticleJS Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 120,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": { "value": ["#ff6f61", "#d72631", "#3a1c71", "#ffcc00"] },
+                "shape": {
+                    "type": "polygon",
+                    "stroke": { "width": 0, "color": "#000000" },
+                    "polygon": { "nb_sides": 6 }
+                },
+                "opacity": {
+                    "value": 0.7,
+                    "random": true,
+                },
+                "size": {
+                    "value": 5,
+                    "random": true,
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 4,
+                    "direction": "none",
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" },
+                },
+                "modes": {
+                    "repulse": { "distance": 100 },
+                    "push": { "particles_nb": 6 },
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
