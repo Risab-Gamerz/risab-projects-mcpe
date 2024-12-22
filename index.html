@@ -3,224 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risab's Mcpe Projects</title>
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+    <title>Risab's MCPE Projects - Christmas Edition</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Basic reset */
+        /* Reset Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body styling with live gradient animation */
+        /* Body Styling */
         body {
-            font-family: 'Roboto Slab', serif;
-            background: linear-gradient(90deg, #1e3c72, #2a5298, #71b7e6, #9abcfb);
-            background-size: 600% 600%;
-            animation: gradientBG 12s ease infinite;
+            font-family: 'Poppins', sans-serif;
+            background: url('https://cdn.pixabay.com/photo/2017/12/25/14/40/snow-3034743_1280.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: white;
-            padding: 0;
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            line-height: 1.6;
             min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
         }
 
-        /* Live background animation */
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Falling stars */
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        /* Header Styling */
+        /* Heading Styling */
         h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Mountains of Christmas', cursive;
             font-size: 4rem;
-            font-weight: 700;
-            text-align: center;
+            color: #ff4444; /* Christmas Red */
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
             margin-top: 50px;
-            text-decoration: underline;
-            color: #ffd700; /* Golden text color */
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(255, 223, 0, 0.8), 0 0 30px rgba(255, 223, 0, 0.6);
-            z-index: 2;
         }
 
         /* Paragraph Styling */
         p {
-            font-size: 1.5rem;
-            text-align: center;
-            margin-top: 20px;
+            font-size: 1.4rem;
+            color: #fefefe;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            margin: 20px auto;
             max-width: 800px;
-            font-weight: 300;
-            line-height: 1.7;
-            color: #ffffff;
-            z-index: 2;
-            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
         }
 
         /* Section Styling */
         .section {
-            width: 90%;
-            max-width: 1000px;
-            padding: 40px 20px;
-            text-align: center;
             background: rgba(255, 255, 255, 0.2);
-            margin-top: 40px;
-            border-radius: 20px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 12px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            z-index: 2;
+            border: 2px solid #ff4444;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+            padding: 20px;
+            max-width: 800px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .section:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6), 0 10px 30px rgba(255, 255, 255, 0.5);
         }
 
+        /* Section Heading */
         .section h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #ffcc00;
-            font-weight: 700;
-            text-transform: uppercase;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+            font-family: 'Mountains of Christmas', cursive;
+            color: #ffd700; /* Golden */
+            text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+            margin-bottom: 15px;
         }
 
-        .section p {
-            font-size: 1.3rem;
-            color: white;
-            font-weight: 400;
-        }
-
-        /* Stylish Section Links */
-        .section-link {
-            display: inline-block;
-            color: white;
+        /* Link Styling */
+        .section a {
+            font-size: 1.2rem;
+            color: #fff;
+            background: linear-gradient(90deg, #ff4444, #44ff44); /* Red to Green */
+            padding: 10px 20px;
+            border-radius: 25px;
             text-decoration: none;
-            font-size: 1.3rem;
             font-weight: bold;
-            letter-spacing: 1px;
-            padding: 12px 25px;
-            border-radius: 50px;
-            background: linear-gradient(90deg, #ff6f61, #d72631);
-            transition: all 0.4s ease;
+            transition: background 0.3s, box-shadow 0.3s;
         }
 
-        .section-link:hover {
-            background: linear-gradient(90deg, #d72631, #ff6f61);
-            color: black;
-            box-shadow: 0 4px 10px rgba(215, 38, 49, 0.6), 0 6px 15px rgba(255, 111, 97, 0.5);
+        .section a:hover {
+            background: linear-gradient(90deg, #44ff44, #ff4444);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6), 0 6px 15px rgba(255, 0, 0, 0.5);
         }
 
-        /* Responsive Design */
+        /* Canvas for Snowfall Effect */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Responsive Styling */
         @media (max-width: 768px) {
             h1 {
                 font-size: 3rem;
             }
 
-            .section h2 {
-                font-size: 2rem;
-            }
-
             p {
                 font-size: 1.2rem;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .section a {
+                font-size: 1rem;
+                padding: 8px 15px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Canvas for Falling Stars -->
-    <canvas id="fallingStars"></canvas>
+    <!-- Canvas for Falling Snow -->
+    <canvas id="snowCanvas"></canvas>
 
-    <!-- Heading -->
-    <h1>Risab's Mcpe Projects</h1>
+    <!-- Header -->
+    <h1>🎄 Risab's MCPE Projects 🎄</h1>
+    <p>Welcome to the Christmas edition of Risab's MCPE Projects. Explore festive mods, shaders, and texture packs!</p>
 
-    <!-- Welcome message -->
-    <p>Welcome to Mcpe Projects made by me. Here you will find many different types of mods and texture packs created by me.</p>
-
-    <!-- Section links -->
-    <div id="section1" class="section">
-        <h2>RG SHADER</h2>
-        <p><a class="section-link" href="rgshader.html">Visit RG Shader</a></p>
+    <!-- Sections -->
+    <div class="section">
+        <h2>🎅 RG Shader</h2>
+        <a href="rgshader.html">Visit RG Shader</a>
+    </div>
+    <div class="section">
+        <h2>🎁 Aesthetic Sound</h2>
+        <a href="aestheticsound.html">Visit Aesthetic Sound</a>
+    </div>
+    <div class="section">
+        <h2>❄️ Apple Shader</h2>
+        <a href="appleshader.html">Visit Apple Shader</a>
+    </div>
+    <div class="section">
+        <h2>🎄 Apple Shader (RW Variation)</h2>
+        <a href="appleshaderrw.html">Visit Apple Shader RW</a>
+    </div>
+    <div class="section">
+        <h2>🌟 Sigma Optimizer</h2>
+        <a href="sigmaoptimizer.html">Visit Sigma Optimizer</a>
+    </div>
+    <div class="section">
+        <h2>🎅 Red Dragon 16x</h2>
+        <a href="reddragon.html">Visit Red Dragon</a>
+    </div>
+    <div class="section">
+        <h2>🎁 FPS Booster</h2>
+        <a href="fpsbooster.html">Visit FPS Booster</a>
+    </div>
+    <div class="section">
+        <h2>❄️ Better Grass</h2>
+        <a href="bettergrass.html">Visit Better Grass</a>
+    </div>
+    <div class="section">
+        <h2>🎄 Sigma Client</h2>
+        <a href="sigmaclient.html">Visit Sigma Client</a>
+    </div>
+    <div class="section">
+        <h2>🌟 Night Vision</h2>
+        <a href="nightvision.html">Visit Night Vision</a>
+    </div>
+    <div class="section">
+        <h2>🎅 Warriors' 64x Texture</h2>
+        <a href="warriors64x.html">Visit Warriors' 64x Texture</a>
+    </div>
+    <div class="section">
+        <h2>🎁 Warriors' PvP Client</h2>
+        <a href="warriorsclient.html">Visit Warriors' PvP Client</a>
     </div>
 
-    <div id="section2" class="section">
-        <h2>Aesthetic Sound</h2>
-        <p><a class="section-link" href="astheticsound.html">Visit Aesthetic Sound</a></p>
-    </div>
-
-    <div id="section3" class="section">
-        <h2>Apple Shader</h2>
-        <p><a class="section-link" href="appleshader.html">Visit Apple Shader</a></p>
-    </div>
-
-    <div id="section4" class="section">
-        <h2>Apple Shader (RW Variation)</h2>
-        <p><a class="section-link" href="appleshaderrw.html">Visit Apple Shader RW</a></p>
-    </div>
-    <div id="section5" class="section">
-        <h2>Sigma Optimizer</h2>
-        <p><a class="section-link" href="sigmaoptimizer.html">Visit Sigma Optimizer</a></p>
-    </div>
-     <div id="section6" class="section">
-        <h2>Red Dragon 16x</h2>
-        <p><a class="section-link" href="reddragon.html">Visit Red Dragon</a></p>
-    </div>
-        <div id="section7" class="section">
-        <h2>FPS BOOSTER</h2>
-        <p><a class="section-link" href="fpsbooster.html">Visit FPS Bppster</a></p>
-    </div>
-    <div id="section8" class="section">
-        <h2>Better Grass</h2>
-        <p><a class="section-link" href="bettergrass.html">Visit Better Grass</a></p>
-    </div>
-    <div id="section9" class="section">
-        <h2>Sigma Client</h2>
-        <p><a class="section-link" href="sigmaclient.html">Visit Sigma Client</a></p>
-    </div>
-    <div id="section10" class="section">
-        <h2>Night Vision</h2>
-        <p><a class="section-link" href="nightvision.html">Visit Night Vision</a></p>
-    </div>
-    <div id="section11" class="section">
-        <h2>Warriors' 64x Texture</h2>
-        <p><a class="section-link" href="warriors'64x.html">Visit </a></p>
-    </div>
-    <div id="section12" class="section">
-        <h2>Warriors' PvP Client</h2>
-        <p><a class="section-link" href="warriors'client.html">Visit Warriors' Client</a></p>
-    </div>
-    
-    <!-- JavaScript for Falling Stars -->
+    <!-- Snowfall Effect Script -->
     <script>
-        const canvas = document.getElementById('fallingStars');
+        const canvas = document.getElementById('snowCanvas');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const stars = [];
-        const starCount = 50;
+        const snowflakes = [];
+        const numberOfSnowflakes = 100;
 
-        class Star {
+        class Snowflake {
             constructor(x, y, size, speed) {
                 this.x = x;
                 this.y = y;
@@ -229,48 +196,48 @@
             }
 
             draw() {
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
                 ctx.fill();
             }
 
             update() {
                 this.y += this.speed;
                 if (this.y > canvas.height) {
-                    this.y = 0 - this.size;
+                    this.y = 0;
                     this.x = Math.random() * canvas.width;
                 }
             }
         }
 
-        function createStars() {
-            for (let i = 0; i < starCount; i++) {
+        function createSnowflakes() {
+            for (let i = 0; i < numberOfSnowflakes; i++) {
                 const x = Math.random() * canvas.width;
                 const y = Math.random() * canvas.height;
-                const size = Math.random() * 2 + 1;
-                const speed = Math.random() * 2 + 1;
-                stars.push(new Star(x, y, size, speed));
+                const size = Math.random() * 3 + 1;
+                const speed = Math.random() * 1.5 + 0.5;
+                snowflakes.push(new Snowflake(x, y, size, speed));
             }
         }
 
-        function animate() {
+        function animateSnowfall() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            stars.forEach(star => {
-                star.update();
-                star.draw();
+            snowflakes.forEach(snowflake => {
+                snowflake.update();
+                snowflake.draw();
             });
-            requestAnimationFrame(animate);
+            requestAnimationFrame(animateSnowfall);
         }
 
-        createStars();
-        animate();
+        createSnowflakes();
+        animateSnowfall();
 
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            stars.length = 0;
-            createStars();
+            snowflakes.length = 0;
+            createSnowflakes();
         });
     </script>
 </body>
