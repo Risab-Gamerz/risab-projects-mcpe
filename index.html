@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risab's MCPE Projects</title>
+    <meta name="description" content="Best texture packs , mods ,shaders , skins for minecraft pe / mcpe / mcbe made by RisabGamerz / Risab Das / RisabWarrior95 Github ">
+  <meta name="keywords" content="mcpe, minecraft, RisabGamerz, RisabDas, Texture pack, addons, fps booster">
+    <title>MCPE Textures,Mods 2025 By RisabGamerz</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Reset Styles */
         * {
@@ -17,79 +20,96 @@
         /* Body Styling */
         body {
             font-family: 'Poppins', sans-serif;
-            background: 
-                linear-gradient(rgba(255, 0, 0, 0.2), rgba(0, 255, 0, 0.2)), 
-                url('https://cdn.pixabay.com/photo/2017/12/25/14/40/snow-3034743_1280.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
             color: white;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             min-height: 100vh;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling for better UX */
         }
 
         /* Heading Styling */
         h1 {
-            font-family: 'Mountains of Christmas', cursive;
-            font-size: 4rem;
-            color: #ff4444; /* Christmas Red */
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
-            margin-top: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            color: #00f7ff; /* Neon Blue */
+            text-shadow: 0 0 20px rgba(0, 247, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6);
+            margin-bottom: 20px;
+            text-decoration: underline;
+            text-decoration-color: black;
+            white-space: nowrap;
         }
 
-        /* Paragraph Styling */
         p {
             font-size: 1.4rem;
-            color: #fefefe;
+            color: #dcdcdc;
+            margin-bottom: 30px;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-            margin: 20px auto;
-            max-width: 800px;
+        }
+    p1{
+        color:Red;
+    }
+    a{
+        color:Cyan;
+        font-size:1rem;
+    }
+
+        /* Grid Container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        /* Section Styling */
-        .section {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid #ff4444;
+        /* Grid Item Styling */
+        .grid-item {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid rgba(0, 247, 255, 0.6);
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            margin: 20px;
+            box-shadow: 0 4px 15px rgba(0, 247, 255, 0.6);
             padding: 20px;
-            max-width: 800px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .section:hover {
+        .grid-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6), 0 10px 30px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 30px rgba(0, 255, 255, 0.8), 0 10px 40px rgba(255, 255, 255, 0.5);
         }
 
-        /* Section Heading */
-        .section h2 {
-            font-family: 'Mountains of Christmas', cursive;
-            color: #ffd700; /* Golden */
-            text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+        /* Grid Item Heading */
+        .grid-item h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: Cyan; /* Neon Green */
+            text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
             margin-bottom: 15px;
         }
 
         /* Link Styling */
-        .section a {
+        .grid-item a {
             font-size: 1.2rem;
             color: #fff;
-            background: linear-gradient(90deg, #ff4444, #44ff44); /* Red to Green */
+            background: linear-gradient(90deg, #00f7ff, #00ff00); /* Neon Blue to Green */
             padding: 10px 20px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
             transition: background 0.3s, box-shadow 0.3s;
+            display: inline-block;
+            margin-top: 10px;
         }
 
-        .section a:hover {
-            background: linear-gradient(90deg, #44ff44, #ff4444);
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6), 0 6px 15px rgba(255, 0, 0, 0.5);
+        .grid-item a:hover {
+            background: linear-gradient(90deg, #00ff00, #00f7ff);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6), 0 6px 25px rgba(0, 255, 255, 0.5);
         }
 
-        /* Canvas for Snowfall Effect */
+        /* Canvas for Spark Particles */
         canvas {
             position: fixed;
             top: 0;
@@ -101,156 +121,164 @@
         }
 
         /* Responsive Styling */
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
             h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             p {
                 font-size: 1.2rem;
             }
-
-            .section {
-                padding: 15px;
-            }
-
-            .section a {
-                font-size: 1rem;
-                padding: 8px 15px;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Canvas for Falling Snow -->
-    <canvas id="snowCanvas"></canvas>
+    <!-- Canvas for Spark Particles -->
+    <canvas id="sparkCanvas"></canvas>
 
     <!-- Header -->
-    <h1>🎄 Risab's MCPE Projects 🎄</h1>
-    <p>Welcome to the Christmas edition of Risab's MCPE Projects. Explore festive mods, shaders, and texture packs!</p>
+    <h1>MCPE PROJECTS</h1>
+    <p>Explore futuristic mods, shaders, and texture packs for Minecraft Pocket And Bedrock Edition ! </p>
+    <p1>Creator: RisabGamerz</p1>
+    <br>
+    <a href="https://www.youtube.com/@RisabGamerz">Youtube Channel</a>
+    <br>
+    <a href="https://mcpedl.com/user/risab-gamerz/">MCPEDL Page</a>
 
-    <!-- Sections -->
-    <div class="section">
-        <h2>🎅 RG Shader</h2>
-        <a href="rgshader.html">Visit RG Shader</a>
+    <!-- Grid Container -->
+    <div class="grid-container">
+        <div class="grid-item">
+            <h2>🗿 Sigma Client</h2>
+            <a href="sigmaclient.html">Visit Paget</a>
+        </div>
+        <div class="grid-item">
+            <h2>🌅 RG Shader</h2>
+            <a href="rgshader.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🌅 Apple Shader</h2>
+            <a href="appleshader.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🌾 Better Grass</h2>
+            <a href="bettergrass.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🎵Aesthetic Sound</h2>
+            <a href="astheticsound.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🛡️ Warriors' PvP Client</h2>
+            <a href="warriors'client.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🟥 Red Dragon 16x</h2>
+            <a href="reddragon.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🌅 Apple Shader (RW Variation)</h2>
+            <a href="appleshaderrw.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🌌 Night Vision</h2>
+            <a href="nightvision.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>⚔️ Warriors' 64x Texture</h2>
+            <a href="warriors'64x.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>📈 Gamma Optimizer</h2>
+            <a href="gammaop.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🔧 Pure Optimizer</h2>
+            <a href="pureop.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🎮 FPS Booster</h2>
+            <a href="fpsbooster.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🟥 Red UI Transparent</h2>
+            <a href="redui.html">Visit Page</a>
+        </div>
+        <div class="grid-item">
+            <h2>🗿Sigma Optimizer</h2>
+            <a href="sigmaoptimizer.html">Visit Page</a>
+        </div>
     </div>
-    <div class="section">
-        <h2>🎁 Aesthetic Sound</h2>
-        <a href="astheticsound.html">Visit Aesthetic Sound</a>
-    </div>
-    <div class="section">
-        <h2>❄️ Apple Shader</h2>
-        <a href="appleshader.html">Visit Apple Shader</a>
-    </div>
-    <div class="section">
-        <h2>🎄 Apple Shader (RW Variation)</h2>
-        <a href="appleshaderrw.html">Visit Apple Shader RW</a>
-    </div>
-    <div class="section">
-        <h2>🌟 Sigma Optimizer</h2>
-        <a href="sigmaoptimizer.html">Visit Sigma Optimizer</a>
-    </div>
-    <div class="section">
-        <h2>🎅 Red Dragon 16x</h2>
-        <a href="reddragon.html">Visit Red Dragon</a>
-    </div>
-    <div class="section">
-        <h2>🎁 FPS Booster</h2>
-        <a href="fpsbooster.html">Visit FPS Booster</a>
-    </div>
-    <div class="section">
-        <h2>❄️ Better Grass</h2>
-        <a href="bettergrass.html">Visit Better Grass</a>
-    </div>
-    <div class="section">
-        <h2>🎄 Sigma Client</h2>
-        <a href="sigmaclient.html">Visit Sigma Client</a>
-    </div>
-    <div class="section">
-        <h2>🌟 Night Vision</h2>
-        <a href="nightvision.html">Visit Night Vision</a>
-    </div>
-    <div class="section">
-        <h2>🎅 Warriors' 64x Texture</h2>
-        <a href="warriors'64x.html">Visit Warriors' 64x Texture</a>
-    </div>
-    <div class="section">
-        <h2>🎁 Warriors' PvP Client</h2>
-        <a href="warriors'client.html">Visit Warriors' PvP Client</a>
-    </div>
-        <div class="section">
-        <h2>RED Ui Transparent </h2>
-        <a href="redui.html">Visit Red Ui</a>
-    </div>
-    <div class="section">
-        <h2>Gamma Optimizer</h2>
-        <a href="gammaop.html">Visit Optimizer</a>
-    </div>
-<div class="section">
-        <h2>Pure Optimizer</h2>
-        <a href="pureop.html">Visit Pure Optimizer</a>
-    </div>
-    <!-- Snowfall Effect Script -->
+
+    <!-- Spark Particles Script -->
     <script>
-        const canvas = document.getElementById('snowCanvas');
+        const canvas = document.getElementById('sparkCanvas');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const snowflakes = [];
-        const numberOfSnowflakes = 100;
+        const sparks = [];
+        const numberOfSparks = 150;
 
-        class Snowflake {
-            constructor(x, y, size, speed) {
+        class Spark {
+            constructor(x, y, size, speedX, speedY) {
                 this.x = x;
                 this.y = y;
                 this.size = size;
-                this.speed = speed;
+                this.speedX = speedX;
+                this.speedY = speedY;
+                this.opacity = 1;
             }
 
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+                ctx.fillStyle = `rgba(0, 255, 0, ${this.opacity})`;
                 ctx.fill();
             }
 
             update() {
-                this.y += this.speed;
-                if (this.y > canvas.height) {
-                    this.y = 0;
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.opacity -= 0.02;
+                if (this.opacity <= 0) {
                     this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 3 + 1;
+                    this.speedX = Math.random() * 2 - 1;
+                    this.speedY = Math.random() * 2 - 1;
+                    this.opacity = 1;
                 }
             }
         }
 
-        function createSnowflakes() {
-            for (let i = 0; i < numberOfSnowflakes; i++) {
+        function createSparks() {
+            for (let i = 0; i < numberOfSparks; i++) {
                 const x = Math.random() * canvas.width;
                 const y = Math.random() * canvas.height;
                 const size = Math.random() * 3 + 1;
-                const speed = Math.random() * 1.5 + 0.5;
-                snowflakes.push(new Snowflake(x, y, size, speed));
+                const speedX = Math.random() * 2 - 1;
+                const speedY = Math.random() * 2 - 1;
+                sparks.push(new Spark(x, y, size, speedX, speedY));
             }
         }
 
-        function animateSnowfall() {
+        function animateSparks() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            snowflakes.forEach(snowflake => {
-                snowflake.update();
-                snowflake.draw();
+            sparks.forEach(spark => {
+                spark.update();
+                spark.draw();
             });
-            requestAnimationFrame(animateSnowfall);
+            requestAnimationFrame(animateSparks);
         }
 
-        createSnowflakes();
-        animateSnowfall();
+        createSparks();
+        animateSparks();
 
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            snowflakes.length = 0;
-            createSnowflakes();
+            sparks.length = 0;
+            createSparks();
         });
     </script>
 </body>
