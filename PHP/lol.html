@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validating Linkvertise...</title>
+</head>
+<body>
+  <h2>Checking link, please wait...</h2>
+  <script>
+    const token = "0b5916bb1bce8ab33e8d2b0712b42a75ef3ee40d2bc181b4f8d3092ddda5c124"; // Your Linkvertise token
+    const mediafireURL = "https://www.mediafire.com/file/h8vnqg4e5vwdloa/AppleShader.mcpack/file"; // Your final file
+
+    const params = new URLSearchParams(window.location.search);
+    const hash = params.get("hash");
+
+    if (!hash) {
+      document.body.innerHTML = "<h3>Access denied. Missing hash.</h3>";
+    } else {
+      const apiURL = `https://publisher.linkvertise.com/api/v1/anti_bypassing?token=${token}&hash=${hash}`;
+
+      fetch(apiURL, { method: "POST" })
+        .then(res => res.text())
+        .then(data => {
+          if (data.trim() === "true") {
+            window.location.href = mediafireURL;
+          } else {
+            document.body.innerHTML = "<h3>Access denied. Invalid or expired hash.</h3>";
+          }
+        })
+        .catch(err => {
+          console.error(err);
+          document.body.innerHTML = "<h3>Error verifying hash. Please try again.</h3>";
+        });
+    }
+  </script>
+</body>
+</html>
